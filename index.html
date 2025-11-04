@@ -2,138 +2,75 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Novagam | Finops Consulting</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Novagam | Finops Consulting</title>
   <style>
-    body { margin:0; font-family:'Montserrat',Arial,sans-serif; background:linear-gradient(135deg,#f1f6fb 0%,#eef2f7 100%); color: #222; }
-    .header { display: flex; align-items: center; justify-content: space-between; padding:40px 10vw 16px 10vw; background: transparent;}
-    .logo { width:80px; }
-    .langs { font-weight:bold; margin-left:auto; }
-    .langs button { background:none; border:none; font-weight:bold; font-size:1.1em; cursor:pointer; padding:0 13px; color:#3384fc;}
-    .title { font-size:2.4em; font-weight:900; margin-left:22px;}
-    .hero { text-align:center; padding:60px 8vw 40px 8vw; }
-    .hero h1 {font-size:2.8em; font-weight:900; margin-bottom:10px;}
-    .hero p {font-size:1.22em; margin-bottom:32px;}
-    .cta { background: #3384fc; color: #fff; border:none; border-radius:6px; padding:14px 30px; font-size:1.25em; cursor:pointer; box-shadow:0 2px 14px #3384fc55;}
-    .services { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; padding:40px 4vw;}
-    .service-card { background:#fff; border-radius:16px; box-shadow:0 4px 16px #0001; padding:34px 23px; width:290px; text-align:center; transition:transform 0.2s;}
-    .service-card:hover { transform:scale(1.04);}
-    .service-icon { font-size:3em; color:#3384fc; margin-bottom:14px;}
-    .testimonials { background:#f0f6fc; padding:44px 5vw;}
-    .testimonial { display:flex; align-items:center; gap:28px; margin-bottom:30px;}
-    .testimonial img { border-radius:50%; width:62px; }
-    .testimonial-text { font-style:italic; }
-    .contact { padding:44px 10vw;}
-    .form { display:flex; flex-direction:column; max-width:400px; margin: auto;}
-    .form input, .form textarea { margin-bottom:20px; padding:12px; border-radius:7px; border:1px solid #ddd;}
-    .form button { background:#3384fc; color:#fff; border:none; border-radius:6px; padding:12px 20px; font-size:1.13em; cursor:pointer;}
-    footer { background:#222; color:#fff; text-align:center; padding:30px 4vw; font-size:0.95em;}
-    @media (max-width:800px) {
-      .services { flex-direction:column; align-items:center; }
-      .header, .contact { padding:32px 5vw;}
-    }
+    body { font-family: 'Montserrat', Arial, sans-serif; background: #f9fafb; margin: 0; color: #222; }
+    .container { max-width: 700px; margin: 40px auto; background: #fff; padding: 36px 34px; border-radius: 16px; box-shadow: 0 8px 24px #0001;}
+    .logo { width: 110px;}
+    .header { display: flex; align-items: center; gap: 20px; }
+    .title { font-size: 2.2em; font-weight: 900;}
+    .switch { float: right;}
+    .section { margin-top: 24px;}
+    .services { background: #eef2f6; padding: 14px; border-radius: 8px;}
+    .contact-link { font-size: 1em; color: #3384fc; text-decoration: underline; }
+    .toggle { cursor:pointer; background:transparent; border:none; font-weight:bold; padding:0 10px; font-size:1em;}
+    .phone-link { font-size:1em; color:#3384fc; text-decoration:underline; margin-left:8px; }
   </style>
 </head>
 <body>
-  <div class="header">
-      <img src="Logo-sans-Inc.jpg" alt="Novagam Logo" class="logo">
-      <span class="title">Novagam</span>
-      <span class="langs">
-          <button onclick="switchLang('fr')">FR</button>
-          <button onclick="switchLang('en')">EN</button>
+  <div class="container">
+    <div class="header">
+      <img src="Logo-sans-Inc.jpg" alt="Novagam Logo" class="logo"/>
+      <span class="title" id="company-name">Novagam</span>
+      <span class="switch">
+        <button class="toggle" onclick="switchLang('fr')">FR</button> |
+        <button class="toggle" onclick="switchLang('en')">EN</button>
       </span>
+    </div>
+    <div id="content-fr" style="display:block;">
+      <h2>La solution Finops, nouvelle génération</h2>
+      <div class="section"><b>Nous accompagnons les organisations pour maximiser la valeur du cloud tout en maîtrisant leurs coûts.</b></div>
+      <div class="section services">
+        <ul>
+          <li>Analyse et optimisation des coûts cloud</li>
+          <li>Conseil en stratégie Finops</li>
+          <li>Formations personnalisées</li>
+          <li>Accompagnement à la transformation numérique</li>
+        </ul>
+      </div>
+      <div class="section">
+        <b>Contact :</b>
+        <a href="mailto:contact@novagam.com" class="contact-link">contact@novagam.com</a>
+        <span> | </span>
+        <b>Téléphone :</b>
+        <a href="tel:+15145655359" class="phone-link">+1 514-565-5359</a>
+      </div>
+    </div>
+    <div id="content-en" style="display:none;">
+      <h2>The next generation Finops Solution</h2>
+      <div class="section"><b>We help organizations maximize cloud value while controlling costs.</b></div>
+      <div class="section services">
+        <ul>
+          <li>Cloud cost analysis & optimization</li>
+          <li>Finops strategy consulting</li>
+          <li>Customized training sessions</li>
+          <li>Guidance for digital transformation</li>
+        </ul>
+      </div>
+      <div class="section">
+        <b>Contact:</b>
+        <a href="mailto:contact@novagam.com" class="contact-link">contact@novagam.com</a>
+        <span> | </span>
+        <b>Phone:</b>
+        <a href="tel:+15145655359" class="phone-link">+1 514-565-5359</a>
+      </div>
+    </div>
   </div>
-  <div class="hero" id="hero-fr">
-    <h1>Experts Finops & Cloud au service de votre succès</h1>
-    <p>Novagam accompagne les organisations modernes dans la maîtrise des coûts Cloud et la maximisation de la valeur métier. Consulting, audits, formation : un seul interlocuteur, toute votre performance Cloud.</p>
-    <button class="cta" onclick="document.getElementById('contact-fr').scrollIntoView({behavior:'smooth'})">Contactez-nous</button>
-  </div>
-  <div class="hero" id="hero-en" style="display:none;">
-    <h1>Finops & Cloud Experts for your success</h1>
-    <p>Novagam empowers modern organizations to master Cloud costs and maximize business value. Consulting, audits, training : one trusted partner, all your Cloud performance.</p>
-    <button class="cta" onclick="document.getElementById('contact-en').scrollIntoView({behavior:'smooth'})">Contact us</button>
-  </div>
-  <section class="services" id="services-fr">
-    <div class="service-card">
-      <span class="material-icons service-icon">trending_up</span>
-      <h3>Optimisation des coûts Cloud</h3>
-      <p>Analyse précise, recommandations actionnables, reporting enrichi pour vos équipes.</p>
-    </div>
-    <div class="service-card">
-      <span class="material-icons service-icon">school</span>
-      <h3>Formations personnalisées</h3>
-      <p>Des workshops et formations adaptées selon votre maturité Finops.</p>
-    </div>
-    <div class="service-card">
-      <span class="material-icons service-icon">construction</span>
-      <h3>Conseil en stratégie Finops</h3>
-      <p>Transformation numérique orientée valeur, alignée à vos objectifs business.</p>
-    </div>
-  </section>
-  <section class="services" id="services-en" style="display:none;">
-    <div class="service-card">
-      <span class="material-icons service-icon">trending_up</span>
-      <h3>Cloud Cost Optimization</h3>
-      <p>Precise analysis, actionable recommendations, advanced reporting for your teams.</p>
-    </div>
-    <div class="service-card">
-      <span class="material-icons service-icon">school</span>
-      <h3>Tailored Training</h3>
-      <p>Workshops and trainings custom-fit for your Finops maturity and profile.</p>
-    </div>
-    <div class="service-card">
-      <span class="material-icons service-icon">construction</span>
-      <h3>Finops Strategy Consulting</h3>
-      <p>Business value-focused digital transformation, aligned with your goals.</p>
-    </div>
-  </section>
-  <section class="testimonials" id="testimonials-fr">
-      <h2>Témoignages</h2>
-      <div class="testimonial"><img src="https://randomuser.me/api/portraits/men/44.jpg"/><span class="testimonial-text">« Novagam nous a permis de réduire nos coûts cloud de 31 % en 4 mois ! Service rapide, conseils de haut niveau. »</span></div>
-      <div class="testimonial"><img src="https://randomuser.me/api/portraits/women/65.jpg"/><span class="testimonial-text">« Grâce à leur approche Finops, notre équipe IT est motivée et performante. »</span></div>
-  </section>
-  <section class="testimonials" id="testimonials-en" style="display:none;">
-      <h2>Testimonials</h2>
-      <div class="testimonial"><img src="https://randomuser.me/api/portraits/men/44.jpg"/><span class="testimonial-text">“Novagam helped us reduce our cloud bills by 31% in 4 months! Fast service, high-level advice.”</span></div>
-      <div class="testimonial"><img src="https://randomuser.me/api/portraits/women/65.jpg"/><span class="testimonial-text">“Thanks to their Finops approach, our IT team is motivated and performing.”</span></div>
-  </section>
-  <section class="contact" id="contact-fr">
-    <h2>Contact</h2>
-    <p><b>Email :</b> <a href="mailto:contact@novagam.com" class="contact-link">contact@novagam.com</a></p>
-    <p><b>Téléphone :</b> <a href="tel:+15145655359" class="contact-link">+1 514-565-5359</a></p>
-    <form class="form" name="contact">
-      <input type="text" placeholder="Nom" required>
-      <input type="email" placeholder="Email" required>
-      <textarea rows="4" placeholder="Votre message" required></textarea>
-      <button type="submit">Envoyer</button>
-    </form>
-  </section>
-  <section class="contact" id="contact-en" style="display:none;">
-    <h2>Contact</h2>
-    <p><b>Email:</b> <a href="mailto:contact@novagam.com" class="contact-link">contact@novagam.com</a></p>
-    <p><b>Phone:</b> <a href="tel:+15145655359" class="contact-link">+1 514-565-5359</a></p>
-    <form class="form" name="contact">
-      <input type="text" placeholder="Name" required>
-      <input type="email" placeholder="Email" required>
-      <textarea rows="4" placeholder="Your message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
-  <footer>
-    © 2025 Novagam. Finops Consulting Canada · Spain | contact@novagam.com
-  </footer>
   <script>
     function switchLang(lang) {
-      document.getElementById('hero-fr').style.display = lang === 'fr' ? 'block' : 'none';
-      document.getElementById('services-fr').style.display = lang === 'fr' ? 'flex' : 'none';
-      document.getElementById('testimonials-fr').style.display = lang === 'fr' ? 'block' : 'none';
-      document.getElementById('contact-fr').style.display = lang === 'fr' ? 'block' : 'none';
-      document.getElementById('hero-en').style.display = lang === 'en' ? 'block' : 'none';
-      document.getElementById('services-en').style.display = lang === 'en' ? 'flex' : 'none';
-      document.getElementById('testimonials-en').style.display = lang === 'en' ? 'block' : 'none';
-      document.getElementById('contact-en').style.display = lang === 'en' ? 'block' : 'none';
+      document.getElementById('content-fr').style.display = lang === 'fr' ? 'block' : 'none';
+      document.getElementById('content-en').style.display = lang === 'en' ? 'block' : 'none';
     }
   </script>
 </body>
