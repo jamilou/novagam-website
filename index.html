@@ -7,32 +7,96 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <style>
-    body { margin:0; font-family:'Montserrat',Arial,sans-serif; background:linear-gradient(135deg,#f1f6fb 0%,#eef2f7 100%); color: #222; }
-    .header { display: flex; align-items: center; justify-content: space-between; padding:40px 10vw 16px 10vw; background: transparent;}
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: #f2f4f7;
+      color: #162c5b;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 32px 8vw 14px 8vw;
+      background: #162c5b;
+      color: #fff;
+    }
     .logo { width:80px; }
-    .langs { font-weight:bold; margin-left:auto; }
-    .langs button { background:none; border:none; font-weight:bold; font-size:1.1em; cursor:pointer; padding:0 13px; color:#3384fc;}
-    .title { font-size:2.4em; font-weight:900; margin-left:22px;}
-    .hero { text-align:center; padding:60px 8vw 40px 8vw; }
-    .hero h1 {font-size:2.8em; font-weight:900; margin-bottom:10px;}
-    .hero p {font-size:1.22em; margin-bottom:32px;}
-    .cta { background: #3384fc; color: #fff; border:none; border-radius:6px; padding:14px 30px; font-size:1.25em; cursor:pointer; box-shadow:0 2px 14px #3384fc55;}
-    .services { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; padding:40px 4vw;}
-    .service-card { background:#fff; border-radius:16px; box-shadow:0 4px 16px #0001; padding:34px 23px; width:290px; text-align:center; transition:transform 0.2s;}
-    .service-card:hover { transform:scale(1.04);}
-    .service-icon { font-size:3em; color:#3384fc; margin-bottom:14px;}
-    .testimonials { background:#f0f6fc; padding:44px 5vw;}
-    .testimonial { display:flex; align-items:center; gap:28px; margin-bottom:30px;}
-    .testimonial img { border-radius:50%; width:62px; }
-    .testimonial-text { font-style:italic; }
-    .contact { padding:44px 10vw;}
+    .langs button {
+      background: none; border: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      cursor: pointer;
+      padding: 0 13px;
+      color: #00c1e4;
+    }
+    .title { font-size:2.2em; font-weight:900; margin-left:22px; letter-spacing:0.01em; }
+    .hero {
+      text-align: center;
+      padding: 50px 8vw 32px 8vw;
+      background: #fff;
+      margin-bottom: 0;
+      box-shadow: 0 2px 20px #0001;
+      border-radius: 0 0 18px 18px;
+    }
+    .hero h1 {font-size:2.5em; font-weight:900; margin-bottom:10px; color: #2843A0;}
+    .hero p {font-size:1.20em; margin-bottom:28px;color: #2843A0; }
+    .cta {
+      background: linear-gradient(90deg,#00c1e4 0,#2843a0 100%);
+      color: #fff; border:none; border-radius:7px;
+      padding: 14px 30px; font-size:1.18em; cursor:pointer;
+      font-weight: bold; box-shadow: 0 2px 14px #00c1e455;
+      letter-spacing: 0.04em;
+      transition:background 0.2s;
+    }
+    .cta:hover { background:linear-gradient(90deg,#2843a0 0,#00c1e4 100%);}
+    .services {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 38px 4vw; background: #EEF2F8;
+      border-radius:18px; margin: 38px 6vw;
+      box-shadow: 0 2px 20px #0001;
+    }
+    .service-card {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px #162c5b11;
+      padding: 34px 23px;
+      width: 290px;
+      text-align: center;
+      border: 1px solid #d8e0ee;
+      transition: transform 0.2s;
+    }
+    .service-card:hover { transform: scale(1.04); border-color: #00c1e4;}
+    .service-icon { font-size: 3em; color: #00c1e4; margin-bottom: 14px;}
+    .contact {
+      padding:44px 10vw;
+      background:#fff;
+      border-radius: 16px;
+      margin: 34px 0;
+      box-shadow: 0 2px 20px #0001;
+    }
     .form { display:flex; flex-direction:column; max-width:400px; margin: auto;}
-    .form input, .form textarea { margin-bottom:20px; padding:12px; border-radius:7px; border:1px solid #ddd;}
-    .form button { background:#3384fc; color:#fff; border:none; border-radius:6px; padding:12px 20px; font-size:1.13em; cursor:pointer;}
-    footer { background:#222; color:#fff; text-align:center; padding:30px 4vw; font-size:0.95em;}
-    @media (max-width:800px) {
-      .services { flex-direction:column; align-items:center; }
-      .header, .contact { padding:32px 5vw;}
+    .form input, .form textarea {
+      margin-bottom:20px; padding:12px; border-radius:7px; border:1px solid #d8e0ee;
+      font-size:1.06em;
+    }
+    .form button {
+      background:linear-gradient(90deg,#00c1e4 0,#2843a0 100%);
+      color:#fff; border:none; border-radius:6px; padding:12px 20px; font-size:1.13em; cursor:pointer;
+      font-weight: bold;
+      box-shadow: 0 2px 14px #00c1e455;
+      letter-spacing:0.02em;
+    }
+    footer {
+      background: #162c5b;
+      color: #fff;
+      text-align: center;
+      padding:30px 4vw; font-size:0.95em;
+      font-weight: 400;
+      letter-spacing: 0.03em;
+    }
+    @media (max-width:800px){
+      .services{flex-direction:column;align-items:center;}
+      .header, .contact{padding:24px 5vw;}
     }
   </style>
 </head>
@@ -89,16 +153,6 @@
       <p>Business value-focused digital transformation, aligned with your goals.</p>
     </div>
   </section>
-  <section class="testimonials" id="testimonials-fr">
-      <h2>Témoignages</h2>
-      <div class="testimonial"><img src="https://randomuser.me/api/portraits/men/44.jpg"/><span class="testimonial-text">« Novagam nous a permis de réduire nos coûts cloud de 31 % en 4 mois ! Service rapide, conseils de haut niveau. »</span></div>
-      <div class="testimonial"><img src="https://randomuser.me/api/portraits/women/65.jpg"/><span class="testimonial-text">« Grâce à leur approche Finops, notre équipe IT est motivée et performante. »</span></div>
-  </section>
-  <section class="testimonials" id="testimonials-en" style="display:none;">
-      <h2>Testimonials</h2>
-      <div class="testimonial"><img src="https://randomuser.me/api/portraits/men/44.jpg"/><span class="testimonial-text">“Novagam helped us reduce our cloud bills by 31% in 4 months! Fast service, high-level advice.”</span></div>
-      <div class="testimonial"><img src="https://randomuser.me/api/portraits/women/65.jpg"/><span class="testimonial-text">“Thanks to their Finops approach, our IT team is motivated and performing.”</span></div>
-  </section>
   <section class="contact" id="contact-fr">
     <h2>Contact</h2>
     <p><b>Email :</b> <a href="mailto:contact@novagam.com" class="contact-link">contact@novagam.com</a></p>
@@ -128,11 +182,9 @@
     function switchLang(lang) {
       document.getElementById('hero-fr').style.display = lang === 'fr' ? 'block' : 'none';
       document.getElementById('services-fr').style.display = lang === 'fr' ? 'flex' : 'none';
-      document.getElementById('testimonials-fr').style.display = lang === 'fr' ? 'block' : 'none';
       document.getElementById('contact-fr').style.display = lang === 'fr' ? 'block' : 'none';
       document.getElementById('hero-en').style.display = lang === 'en' ? 'block' : 'none';
       document.getElementById('services-en').style.display = lang === 'en' ? 'flex' : 'none';
-      document.getElementById('testimonials-en').style.display = lang === 'en' ? 'block' : 'none';
       document.getElementById('contact-en').style.display = lang === 'en' ? 'block' : 'none';
     }
   </script>
