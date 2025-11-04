@@ -1,192 +1,50 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Novagam | Finops Consulting</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Montserrat', Arial, sans-serif;
-      background: #f2f4f7;
-      color: #162c5b;
-    }
-    .header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 32px 8vw 14px 8vw;
-      background: #162c5b;
-      color: #fff;
-    }
-    .logo { width:80px; }
-    .langs button {
-      background: none; border: none;
-      font-weight: bold;
-      font-size: 1.1em;
-      cursor: pointer;
-      padding: 0 13px;
-      color: #00c1e4;
-    }
-    .title { font-size:2.2em; font-weight:900; margin-left:22px; letter-spacing:0.01em; }
-    .hero {
-      text-align: center;
-      padding: 50px 8vw 32px 8vw;
-      background: #fff;
-      margin-bottom: 0;
-      box-shadow: 0 2px 20px #0001;
-      border-radius: 0 0 18px 18px;
-    }
-    .hero h1 {font-size:2.5em; font-weight:900; margin-bottom:10px; color: #2843A0;}
-    .hero p {font-size:1.20em; margin-bottom:28px;color: #2843A0; }
-    .cta {
-      background: linear-gradient(90deg,#00c1e4 0,#2843a0 100%);
-      color: #fff; border:none; border-radius:7px;
-      padding: 14px 30px; font-size:1.18em; cursor:pointer;
-      font-weight: bold; box-shadow: 0 2px 14px #00c1e455;
-      letter-spacing: 0.04em;
-      transition:background 0.2s;
-    }
-    .cta:hover { background:linear-gradient(90deg,#2843a0 0,#00c1e4 100%);}
-    .services {
-      display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 38px 4vw; background: #EEF2F8;
-      border-radius:18px; margin: 38px 6vw;
-      box-shadow: 0 2px 20px #0001;
-    }
-    .service-card {
-      background: #fff;
-      border-radius: 14px;
-      box-shadow: 0 4px 18px #162c5b11;
-      padding: 34px 23px;
-      width: 290px;
-      text-align: center;
-      border: 1px solid #d8e0ee;
-      transition: transform 0.2s;
-    }
-    .service-card:hover { transform: scale(1.04); border-color: #00c1e4;}
-    .service-icon { font-size: 3em; color: #00c1e4; margin-bottom: 14px;}
-    .contact {
-      padding:44px 10vw;
-      background:#fff;
-      border-radius: 16px;
-      margin: 34px 0;
-      box-shadow: 0 2px 20px #0001;
-    }
-    .form { display:flex; flex-direction:column; max-width:400px; margin: auto;}
-    .form input, .form textarea {
-      margin-bottom:20px; padding:12px; border-radius:7px; border:1px solid #d8e0ee;
-      font-size:1.06em;
-    }
-    .form button {
-      background:linear-gradient(90deg,#00c1e4 0,#2843a0 100%);
-      color:#fff; border:none; border-radius:6px; padding:12px 20px; font-size:1.13em; cursor:pointer;
-      font-weight: bold;
-      box-shadow: 0 2px 14px #00c1e455;
-      letter-spacing:0.02em;
-    }
-    footer {
-      background: #162c5b;
-      color: #fff;
-      text-align: center;
-      padding:30px 4vw; font-size:0.95em;
-      font-weight: 400;
-      letter-spacing: 0.03em;
-    }
-    @media (max-width:800px){
-      .services{flex-direction:column;align-items:center;}
-      .header, .contact{padding:24px 5vw;}
-    }
-  </style>
-</head>
-<body>
-  <div class="header">
-      <img src="Logo-sans-Inc.jpg" alt="Novagam Logo" class="logo">
-      <span class="title">Novagam</span>
-      <span class="langs">
-          <button onclick="switchLang('fr')">FR</button>
-          <button onclick="switchLang('en')">EN</button>
-      </span>
+<!-- HEADER/BANNIÈRE ÉPOUSTOUFLANTE -->
+<div class="header-banner">
+  <div class="banner-top">
+    <img src="Logo-sans-Inc.jpg" alt="Novagam Logo" class="logo">
+    <span class="title">Novagam</span>
+    <span class="langs">
+        <button onclick="switchLang('fr')">FR</button>
+        <button onclick="switchLang('en')">EN</button>
+    </span>
   </div>
-  <div class="hero" id="hero-fr">
-    <h1>Experts Finops & Cloud au service de votre succès</h1>
-    <p>Novagam accompagne les organisations modernes dans la maîtrise des coûts Cloud et la maximisation de la valeur métier. Consulting, audits, formation : un seul interlocuteur, toute votre performance Cloud.</p>
-    <button class="cta" onclick="document.getElementById('contact-fr').scrollIntoView({behavior:'smooth'})">Contactez-nous</button>
+  <div class="palms-bg">
+    <!-- SVG de palmiers stylisés -->
+    <svg width="100%" height="180" viewBox="0 0 1440 180" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top:0; left:0;">
+      <path fill="#00c1e4" fill-opacity="0.12" d="M0,100 C200,30 400,180 600,120 C800,60 1200,220 1440,80 L1440,180 L0,180 Z"/>
+      <!-- Palme stylisée bleu turquoise -->
+      <path d="M440 130 Q460 90 500 115 Q480 90 520 105 Q510 90 550 98"
+        stroke="#00c1e4" stroke-width="4" fill="none" opacity="0.44"/>
+      <path d="M730 80 Q765 30 795 55 Q800 45 820 67" stroke="#00c1e4" stroke-width="4" fill="none" opacity="0.5"/>
+      <path d="M320 140 Q350 105 390 126" stroke="#00c1e4" stroke-width="4" fill="none" opacity="0.33"/>
+    </svg>
   </div>
-  <div class="hero" id="hero-en" style="display:none;">
-    <h1>Finops & Cloud Experts for your success</h1>
-    <p>Novagam empowers modern organizations to master Cloud costs and maximize business value. Consulting, audits, training : one trusted partner, all your Cloud performance.</p>
-    <button class="cta" onclick="document.getElementById('contact-en').scrollIntoView({behavior:'smooth'})">Contact us</button>
+  <div class="wave-separator">
+    <svg width="100%" height="52" viewBox="0 0 1440 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,0 C480,52 960,0 1440,52 L1440,0 L0,0 Z" fill="#fff"/>
+    </svg>
   </div>
-  <section class="services" id="services-fr">
-    <div class="service-card">
-      <span class="material-icons service-icon">trending_up</span>
-      <h3>Optimisation des coûts Cloud</h3>
-      <p>Analyse précise, recommandations actionnables, reporting enrichi pour vos équipes.</p>
-    </div>
-    <div class="service-card">
-      <span class="material-icons service-icon">school</span>
-      <h3>Formations personnalisées</h3>
-      <p>Des workshops et formations adaptées selon votre maturité Finops.</p>
-    </div>
-    <div class="service-card">
-      <span class="material-icons service-icon">construction</span>
-      <h3>Conseil en stratégie Finops</h3>
-      <p>Transformation numérique orientée valeur, alignée à vos objectifs business.</p>
-    </div>
-  </section>
-  <section class="services" id="services-en" style="display:none;">
-    <div class="service-card">
-      <span class="material-icons service-icon">trending_up</span>
-      <h3>Cloud Cost Optimization</h3>
-      <p>Precise analysis, actionable recommendations, advanced reporting for your teams.</p>
-    </div>
-    <div class="service-card">
-      <span class="material-icons service-icon">school</span>
-      <h3>Tailored Training</h3>
-      <p>Workshops and trainings custom-fit for your Finops maturity and profile.</p>
-    </div>
-    <div class="service-card">
-      <span class="material-icons service-icon">construction</span>
-      <h3>Finops Strategy Consulting</h3>
-      <p>Business value-focused digital transformation, aligned with your goals.</p>
-    </div>
-  </section>
-  <section class="contact" id="contact-fr">
-    <h2>Contact</h2>
-    <p><b>Email :</b> <a href="mailto:contact@novagam.com" class="contact-link">contact@novagam.com</a></p>
-    <p><b>Téléphone :</b> <a href="tel:+15145655359" class="contact-link">+1 514-565-5359</a></p>
-    <form class="form" name="contact">
-      <input type="text" placeholder="Nom" required>
-      <input type="email" placeholder="Email" required>
-      <textarea rows="4" placeholder="Votre message" required></textarea>
-      <button type="submit">Envoyer</button>
-    </form>
-  </section>
-  <section class="contact" id="contact-en" style="display:none;">
-    <h2>Contact</h2>
-    <p><b>Email:</b> <a href="mailto:contact@novagam.com" class="contact-link">contact@novagam.com</a></p>
-    <p><b>Phone:</b> <a href="tel:+15145655359" class="contact-link">+1 514-565-5359</a></p>
-    <form class="form" name="contact">
-      <input type="text" placeholder="Name" required>
-      <input type="email" placeholder="Email" required>
-      <textarea rows="4" placeholder="Your message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
-  <footer>
-    © 2025 Novagam. Finops Consulting Canada · Spain | contact@novagam.com
-  </footer>
-  <script>
-    function switchLang(lang) {
-      document.getElementById('hero-fr').style.display = lang === 'fr' ? 'block' : 'none';
-      document.getElementById('services-fr').style.display = lang === 'fr' ? 'flex' : 'none';
-      document.getElementById('contact-fr').style.display = lang === 'fr' ? 'block' : 'none';
-      document.getElementById('hero-en').style.display = lang === 'en' ? 'block' : 'none';
-      document.getElementById('services-en').style.display = lang === 'en' ? 'flex' : 'none';
-      document.getElementById('contact-en').style.display = lang === 'en' ? 'block' : 'none';
-    }
-  </script>
-</body>
-</html>
+</div>
+
+<style>
+.header-banner {
+  position: relative;
+  background: linear-gradient(120deg, #162c5b 60%, #00c1e4 100%);
+  color: #fff;
+  padding-bottom: 0;
+  overflow: hidden;
+}
+.banner-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 36px 8vw 26px 8vw;
+  position: relative;
+  z-index: 2;
+}
+.logo { width:80px; }
+.title { font-size:2.2em; font-weight:900; margin-left:22px; letter-spacing:0.01em; }
+.langs button { background:none; border:none; font-weight:bold; font-size:1.22em; cursor:pointer; padding:0 13px; color:#00c1e4;}
+.palms-bg { position: absolute; left:0; top:0; width:100%; z-index:1; pointer-events:none;}
+.wave-separator { position: relative; width: 100%; top: -2px; z-index:3;}
+</style>
