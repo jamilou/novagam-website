@@ -8,19 +8,15 @@
     body {
       font-family: 'Montserrat', Arial, sans-serif;
       margin: 0; color: #222;
-      overflow-x: hidden;
-      background: #f9fafb;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=85') no-repeat center center fixed;
+      background-size: cover;
     }
-    .bg-fond-horizontal {
+    .overlay {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: auto;
-      min-height: 100vh;
-      z-index: 0;
-      object-fit: cover;
-      object-position: center;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(245, 249, 251, 0.57);  /* Optionnel: léger voile pour lisibilité */
+      z-index: 1;
       pointer-events: none;
     }
     .container {
@@ -31,7 +27,7 @@
       padding: 36px 34px;
       border-radius: 16px;
       box-shadow: 0 8px 24px #0002;
-      z-index: 1;
+      z-index: 2;
     }
     .logo { width: 110px;}
     .header { display: flex; align-items: center; gap: 20px; }
@@ -45,9 +41,8 @@
   </style>
 </head>
 <body>
-  <!-- FOND HORIZONTAL SANS DÉFORMATION VERTICALE -->
-  <img src="Finopsbackground.png" class="bg-fond-horizontal" alt="" />
-  
+  <!-- overlay voile d’adoucissement, facultatif -->
+  <div class="overlay"></div>
   <div class="container">
     <div class="header">
       <img src="Logo-sans-Inc.jpg" alt="Novagam Logo" class="logo"/>
